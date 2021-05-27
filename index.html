@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSWord</title>
+        <link rel='stylesheet' type='text/css' href='./css/reset.css' >
+        <link rel='stylesheet' type='text/css' href='./css/layout.css' >
+        <link rel='stylesheet' type='text/css' href='./css/style.css' >
+    </head>
+
+    <body>
+        <div class='container'>
+            <div class='title-bar'>
+                <div class='edit-menu' id='edit-menu'>
+                    <div class='right'>
+                        <div style="margin-top: 25px;" class='left'>
+                            <div class='edit-item' id='redo'>
+                                <img class='edit-menu-image' src='./images/redo.png' alt='redo' />
+                                <span>Redo</span>
+                            </div>
+                            <div class='edit-item' id='undo'>
+                                <img class='edit-menu-image' src='./images/undo.png' alt='undo' />
+                                <span>Undo</span>
+                            </div>
+                        </div>
+                        <div style="margin-top: 10px;" class='right'>
+                            <div class='edit-item' id='cut'>
+                                <img class='edit-menu-image' src='./images/cut.png' alt='cut' />
+                                <span>Cut</span>
+                            </div>
+                            <div class='edit-item' id='copy'>
+                                <img class='edit-menu-image' src='./images/copy.png' alt='copy' />
+                                <span>Copy</span>
+                            </div>
+                            <div class='edit-item' id='paste'>
+                                <img class='edit-menu-image' src='./images/paste.png' alt='paste' />
+                                <span>Paste</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='format-menu' id='format-menu'>
+                    <div class='font clearfix'>
+                        <select class='family' id = 'family'>
+                            <option>Comic Sans MS</option>
+                            <option>Arial</option>
+                            <option>Times New Roman</option>
+                            <option>Courier New</option>
+                        </select>
+                        <select class='size' id='size'>
+                            <option>8</option>
+                            <option>10</option>
+                            <option>12</option>
+                            <option>14</option>
+                            <option>16</option>
+                            <option>18</option>
+                            <option>20</option>
+                            <option>24</option>
+                            <option>28</option>
+                            <option>32</option>
+                            <option>36</option>
+                            <option>40</option>
+                        </select>
+                    </div>
+                    <div class='formatting clearfix'>
+                        <div class='styles'>
+                            <img class='format-menu-image' id='bold' src='./images/bold.png' alt='bold' />
+                            <img class='format-menu-image' id='italic' src='./images/italic.png' alt='italic' />
+                            <img class='format-menu-image' id='underline' src='./images/underline.png' alt='underline' />
+                        </div>
+                        <div class='alignings'>  
+                            <img class='format-menu-image' id='left-align' src='./images/left-align.png' alt='left-align' />
+                            <img class='format-menu-image' id='center-align' src='./images/center-align.png' alt='center-align' />
+                            <img class='format-menu-image' id='right-align' src='./images/right-align.png' alt='right-align' />
+                            <img class='format-menu-image' id='justify-text' src='./images/justify-text.png' alt='justify-text' />
+                        </div>
+                    </div>
+                </div>
+                <div class='color-menu'>
+                    <div class='color-container'>
+                        <img class='text-color' id='color-text' src='./images/color-text.png' alt='color-text' />
+                        <img class='background-color' id='color-background' src='./images/bucket.png' alt='paint-bucket' />
+                    </div>
+                </div>
+                <div class='misc-menu'>
+                    <div class='misc-container'>
+                        <img class='misc-items' id='numbered-list' src='./images/number-list.png' alt='numbered-list' />
+                        <img class='misc-items' id='bullet-list' src='./images/bullet-list.png' alt='bullet-list' />
+                        <img class='misc-items' id='left-indent' src='./images/left-indent.png' alt='left-indent' />
+                        <img class='misc-items' id='right-indent' src='./images/right-indent.png' alt='right-indent' />
+                    </div>
+                </div>
+                <div class='heading-menu'>
+                    <div class='heading-list'>
+                        <div class='heading-item' id='normal'><div>Normal</div></div>
+                        <div class='heading-item' id='h1'><h1>H1</h1></div>
+                        <div class='heading-item' id='h2'><h2>H2</h2></div>
+                        <div class='heading-item' id='h3'><h3>H3</h3></div>
+                        <div class='heading-item' id='h4'><h4>H4</h4></div>    
+                    </div>
+                </div>
+                <div class='insert-menu'>
+                    <div class='left'>
+                        <div class='insert-item' id='image'>
+                            <img class='insert-menu-image' src='./images/image.png' alt='image' />
+                            <span>Image</span>
+                        </div>
+                        <div class='insert-item' id='table'>
+                            <img class='insert-menu-image' src='./images/table.png' alt='table' />
+                            <span>Table</span>
+                        </div>
+                    </div>
+                    <div class='right'>
+                        <div class='insert-page'>
+                            <img class='insert-page-image' src='./images/page.png' alt='page' />
+                            <div>Page</div>
+                            <div>Number</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class='rest-body'>
+                <div class='content-container' id='content-container' contenteditable='true'>
+                    Hello there!
+                </div>
+            </div>
+        </div>
+
+        <script src='./script/index.js'></script>
+    </body>
+</html>

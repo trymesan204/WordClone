@@ -1,0 +1,14 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: #e5e5e5;
+}
+
+.clearfix{
+    content: '';
+    clear: both;
+    display: table;
+}

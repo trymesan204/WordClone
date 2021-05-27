@@ -1,0 +1,251 @@
+.title-bar{
+    width: 100%;
+    height: 100px;
+    background-color: #f0f0f0;
+    position: fixed;
+    top: 0;
+}
+
+.rest-body{
+    height: 1000px;
+    margin-top: 125px;
+}
+
+.content-container{
+    width: 70%;
+    height: 975px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* cut copy paste undo redo */
+.edit-menu{
+    float: left;
+    width: 12%;
+    border-right: 1px solid #d5d5d5;
+    height: 100%;
+}
+
+.edit-item{
+    padding: 5px 10px;
+}
+
+.edit-item:hover{
+    cursor: pointer;
+}
+
+.edit-menu-image{
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+/* font size family bold italic underline */
+
+/*size and family */
+.format-menu{
+    float: left;
+    width: 25%;
+    border-right: 1px solid #d5d5d5;
+    height: 100%;
+}
+
+.font{
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+.family{
+    float: left;
+    width: 70%;
+    background-color: white;
+    padding: 8px 0;
+    border-right: 0px;
+}
+
+.family:hover{
+    cursor: pointer;
+}
+
+.size{
+    width: 28%;
+    float: left;
+    background-color: white;
+    padding: 8px 0;
+}
+
+.size:hover{
+    cursor: pointer;
+}
+
+/* bold italic underline */
+.formatting{
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.styles{
+    float: left;
+}
+
+.alignings{
+    float: right;
+}
+
+.format-menu-image{
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.format-menu-image:hover{
+    cursor: pointer;
+}
+
+/*coloring */
+.color-menu{
+    float: left;
+    width: 10%;
+    border-right: 1px solid #d5d5d5;
+    height: 100%;
+}
+
+.color-container{
+    width: 50%;
+    margin: auto;
+}
+
+.text-color{
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-top: 35px;
+}
+
+.text-color:hover{
+    cursor: pointer;
+}
+
+.background-color{
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin-top: 35px;
+}
+
+.background-color:hover{
+    cursor: pointer;
+}
+
+/* lists, indentation */
+.misc-menu{
+    float: left;
+    width: 15%;
+    border-right: 1px solid #d5d5d5;
+    height: 100%;
+}
+
+.misc-container{
+    width: 80%;
+    margin: auto;
+    margin-top: 35px;
+}
+
+.misc-items{
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 0px 10px;
+}
+
+.misc-items:hover{
+    cursor: pointer;
+}
+
+/* heading menu */
+.heading-menu{
+    float: left;
+    width: 25%;
+    border-right: 1px solid #d5d5d5;
+    height: 100%;
+}
+
+.heading-list{
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    height: 30px;
+    margin-top: 25px;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.heading-item div{
+    padding-top: 10px;
+}
+
+.heading-list h2{
+    padding-top: 5px;
+}
+
+.heading-list h3{
+    padding-top: 8px;
+}
+
+.heading-list h4{
+    padding-top: 10px;
+}
+
+.heading-item{
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.heading-item:hover{
+    cursor: pointer;
+}
+
+/* insert menu */
+.insert-menu{
+    margin-top: 20px;
+}
+
+.insert-item{
+    padding: 5px 10px;
+}
+
+.insert-menu-image{
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+.insert-item:hover{
+    cursor: pointer;
+}
+
+.insert-page{
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.insert-page-image{
+    width: 30px;
+    height: 30px;
+}
+
+.insert-page:hover{
+    cursor: pointer;
+}
