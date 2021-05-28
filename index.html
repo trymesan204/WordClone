@@ -41,24 +41,20 @@
                 <div class='format-menu' id='format-menu'>
                     <div class='font clearfix'>
                         <select class='family' id = 'family'>
-                            <option>Comic Sans MS</option>
+                            <option>Arial Black</option>
                             <option>Arial</option>
-                            <option>Times New Roman</option>
                             <option>Courier New</option>
+                            <option>Times New Roman</option>
                         </select>
-                        <select class='size' id='size'>
-                            <option>8</option>
-                            <option>10</option>
-                            <option>12</option>
-                            <option>14</option>
-                            <option>16</option>
-                            <option>18</option>
-                            <option>20</option>
-                            <option>24</option>
-                            <option>28</option>
-                            <option>32</option>
-                            <option>36</option>
-                            <option>40</option>
+                        <select class='size' id='size' >
+                            <option value='1'>8</option>
+                            <option value='2'>16</option>
+                            <option value='3' selected='selected'>20</option>
+                            <option value='4'>24</option>
+                            <option value='5'>28</option>
+                            <option value='6'>32</option>
+                            <option value='7'>36</option>
+                            <option value='8'>40</option>
                         </select>
                     </div>
                     <div class='formatting clearfix'>
@@ -76,10 +72,12 @@
                     </div>
                 </div>
                 <div class='color-menu'>
-                    <div class='color-container'>
+                    <div class='color-container' id='color-container'>
                         <img class='text-color' id='color-text' src='./images/color-text.png' alt='color-text' />
                         <img class='background-color' id='color-background' src='./images/bucket.png' alt='paint-bucket' />
                     </div>
+                    <input type='color' id = 'text-color' style="visibility: hidden;" />
+                    <input type='color' id = 'background-color' style="visibility: hidden;" />
                 </div>
                 <div class='misc-menu'>
                     <div class='misc-container'>
@@ -91,11 +89,11 @@
                 </div>
                 <div class='heading-menu'>
                     <div class='heading-list'>
-                        <div class='heading-item' id='normal'><div>Normal</div></div>
-                        <div class='heading-item' id='h1'><h1>H1</h1></div>
-                        <div class='heading-item' id='h2'><h2>H2</h2></div>
-                        <div class='heading-item' id='h3'><h3>H3</h3></div>
-                        <div class='heading-item' id='h4'><h4>H4</h4></div>    
+                        <div class='heading-item'><button id='normal'><p>Normal</p></button></div>
+                        <div class='heading-item'><button id='h1'><h1>H1</h1></button></div>
+                        <div class='heading-item'><button id='h2'><h2>H2</h2></button></div>
+                        <div class='heading-item'><button id='h3'><h3>H3</h3></button></div>
+                        <div class='heading-item'><button id='h4'><h4>H4</h4></button></div>    
                     </div>
                 </div>
                 <div class='insert-menu'>
@@ -110,7 +108,7 @@
                         </div>
                     </div>
                     <div class='right'>
-                        <div class='insert-page'>
+                        <div class='insert-page' id='insert-page'>
                             <img class='insert-page-image' src='./images/page.png' alt='page' />
                             <div>Page</div>
                             <div>Number</div>
@@ -120,9 +118,19 @@
             </div>
 
 
-            <div class='rest-body'>
-                <div class='content-container' id='content-container' contenteditable='true'>
-                    Hello there!
+            <div class='rest-body' id='rest-body'>
+                <div class='content-container' id='content-container'>
+                    <div class='content-center' id='content-center'>
+                        <div class='header' id='header'>
+                            <div class='header-input' id='header-input' contenteditable="true"></div>
+                        </div>
+                        <div class='content' id='content' contenteditable="true">
+
+                        </div>
+                        <div class='footer' id='footer'>
+                            <div class='footer-input' id='footer-input'></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
