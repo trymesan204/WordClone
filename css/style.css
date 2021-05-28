@@ -283,6 +283,7 @@
 
 .content{
     height: 80%;
+    overflow-y: auto;
 }
 
 .footer{

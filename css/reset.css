@@ -13,6 +13,6 @@ body{
     display: table;
 }
 
-/* [contenteditable]{
+[contenteditable]{
     outline: 0px solid transparent;
-} */
+}
