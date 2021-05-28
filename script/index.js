@@ -1,4 +1,5 @@
 var editItems = document.getElementsByClassName('edit-item');
+var selectedElement = document.getElementById('content');
 
 Array.from(editItems).forEach(function(editItem){
     editItem.addEventListener('click', function(){
@@ -125,19 +126,26 @@ Array.from(insertItems).forEach(function(insertItem){
 
                 reader.onload = function(readerEvent) {
                     var content = readerEvent.target.result;
-                    var contentContainer = document.getElementById('content-container');
                     var image = document.createElement('img');
                     image.src = content;
-                    image.style.height = '50px';
-                    image.style.width = '50px';
-                    contentContainer.appendChild(image);
+                    image.style.height = '100%';
+                    image.style.width ='100%';
+                    var imageResize = document.createElement('div');
+                    imageResize.style.display = 'inline-block';
+                    imageResize.style.resize = 'both';
+                    imageResize.style.overflow = 'hidden';
+                    imageResize.style.lineHeight = '0';
+                    imageResize.style.width = '200px';
+                    imageResize.style.height = '200px';
+                    imageResize.appendChild(image);
+                    selectedElement.appendChild(imageResize);
+
                 }
             });
 
             input.click();
 
         }else if(id === 'table'){
-            console.log('hell0');
             var table = document.createElement('table');
             table.style.height = '100px';
             for ( var i = 0; i<3; i++){
@@ -153,8 +161,7 @@ Array.from(insertItems).forEach(function(insertItem){
                 }
                 table.append(row);
             }
-            var contentContainer = document.getElementById('content-container');
-            contentContainer.appendChild(table);
+            selectedElement.appendChild(table);
         }
     });
 });
@@ -247,6 +254,7 @@ window.addEventListener('keyup', function(event){
         var allContents = document.getElementsByClassName('content');
         allContents[allContents.length-1].innerHTML = '';
         allContents[allContents.length-1].focus();
+        
 
         if(pageNumberSelected){
             var lastFooter = document.getElementsByClassName('footer-input');
@@ -279,5 +287,28 @@ pageNumber.addEventListener('click', function(){
 });
 
 
-//insert header
-var headers = content.getElementsByClassName('header-input');
+//find selected Item
+setInterval(function(){
+    if(document.activeElement.id === 'content'){
+        selectedElement = document.activeElement;
+    };
+}, 1000);
+
+
+var prevValue = '';
+setInterval(function(){
+    var headers = document.getElementsByClassName('header-input');
+    Array.from(headers).forEach(function(header){
+        if(header.innerHTML !== prevValue){
+            changeHeader(headers, header.innerHTML);
+            prevValue = header.innerHTML;
+        }
+    });
+}, 8000);
+
+
+function changeHeader(headers, headerValue){
+    Array.from(headers).forEach(function(header){
+        header.innerHTML = headerValue;
+    });
+}
