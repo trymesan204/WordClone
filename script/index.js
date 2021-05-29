@@ -337,6 +337,7 @@ var footerInterval = setInterval(function(){
 }, 10000);
 
 
+
 function changeFooter(footers, footerValue){
     Array.from(footers).forEach(function(footer){
         footer.innerHTML = footerValue;
