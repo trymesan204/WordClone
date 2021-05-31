@@ -130,6 +130,7 @@ Array.from(insertItems).forEach(function(insertItem){
                     image.src = content;
                     image.style.height = '100%';
                     image.style.width ='100%';
+                    
                     var imageResize = document.createElement('div');
                     imageResize.style.display = 'inline-block';
                     imageResize.style.resize = 'both';
@@ -137,9 +138,9 @@ Array.from(insertItems).forEach(function(insertItem){
                     imageResize.style.lineHeight = '0';
                     imageResize.style.width = '200px';
                     imageResize.style.height = '200px';
+                    imageResize.contentEditable = false;
                     imageResize.appendChild(image);
                     selectedElement.appendChild(imageResize);
-
                 }
             });
 
@@ -219,31 +220,27 @@ content.focus();
 var h1 = document.getElementById('h1');
 h1.addEventListener('click', function(){
     document.execCommand('formatblock', false, '<h1>');
-    content.focus();
 });
 
 var h2 = document.getElementById('h2');
 h2.addEventListener('click', function(){
     document.execCommand('formatblock', false, '<h2>');
-    content.focus();
 });
 
 var h3 = document.getElementById('h3');
 h3.addEventListener('click', function(){
     document.execCommand('formatblock', false, '<h3>');
-    content.focus();
 });
 
 var h4 = document.getElementById('h4');
 h4.addEventListener('click', function(){
     document.execCommand('formatblock', false, '<h4>');
-    content.focus();
 });
 
 var normal = document.getElementById('normal');
 normal.addEventListener('click', function(){
     document.execCommand('formatblock', false, 'p');
-    content.focus();
+
 });
 
 
@@ -335,7 +332,6 @@ var footerInterval = setInterval(function(){
         });
     }
 }, 10000);
-
 
 
 function changeFooter(footers, footerValue){
